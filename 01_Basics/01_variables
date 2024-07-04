@@ -1,0 +1,5 @@
+const studentId= 12
+let teacherName= "Sonu"
+var accountId= 32
+studentName= "SonuPoudel"
+console.table([studentId, teacherName, accountId]);
