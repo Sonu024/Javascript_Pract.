@@ -43,12 +43,18 @@ const user = [
         email: "hbdsds@gmail.com"
     }
 ]
-//console.log(user[1]);
+//console.log(user[1]);                   //object inside array
+
+// console.log(Object.keys( newUser));
+// console.log(Object.values( newUser));
 
 
 
-console.log(Object.keys( newUser));
-console.log(Object.values( newUser));
+
+//Destructuring 
+const {username: name}= newUser
+//console.log(username);
+console.log(name);
 
 
 
