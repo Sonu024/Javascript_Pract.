@@ -25,19 +25,19 @@ const sum = value.reduce( (acc, val) => {
 
 const shopping = [
     {
-        shampoo: "Clinic plus"
-        price:' 300'
+        shampoo: "Clinic plus",
+        amount: 300
     },
     {
-        shampoo: "Sunsilk"
-        price: 100
+        shampoo: "Sunsilk",
+        amount: 100
     },
     {
-        shampoo: "Pantene"
-        price: 200
+        shampoo: "Pantene",
+        amount: 200
     },
 ]
-const totalPrice = shopping.reduce( (acc, item) => acc + item.price, 0)
+const totalPrice = shopping.reduce( (acc, item) => acc + item.amount, 0)
 console.log(totalPrice);
 
 
