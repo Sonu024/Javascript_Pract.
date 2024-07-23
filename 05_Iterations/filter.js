@@ -14,11 +14,34 @@
 
 
 //usong foreach
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const arrNums = []
-arr.forEach( (num) => {
-    if(num>5){
-       arrNums.push(num)
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const arrNums = []
+// arr.forEach( (num) => {
+//     if(num>5){
+//        arrNums.push(num)
+//     }
+// })
+// console.log( arrNums);
+
+
+const arr = [
+    {
+        book: "A",
+        author: "X",
+        edition: 2001 
+    },
+    {
+        book: "B",
+        author: "Y",
+        edition: 2002 
+    },
+    {
+        book: "C",
+        author: "Z",
+        edition: 2005
     }
+]
+const Details = arr.filter( (item) => {
+   return item.edition <= 2005 && item.book == "B"
 })
-console.log( arrNums);
+console.log(Details);
