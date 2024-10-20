@@ -24,24 +24,42 @@
 // console.log( arrNums);
 
 
-const arr = [
-    {
-        book: "A",
-        author: "X",
-        edition: 2001 
-    },
-    {
-        book: "B",
-        author: "Y",
-        edition: 2002 
-    },
-    {
-        book: "C",
-        author: "Z",
-        edition: 2005
-    }
-]
-const Details = arr.filter( (item) => {
-   return item.edition <= 2005 && item.book == "B"
-})
-console.log(Details);
+// const arr = [
+//     {
+//         book: "A",
+//         author: "X",
+//         edition: 2001 
+//     },
+//     {
+//         book: "B",
+//         author: "Y",
+//         edition: 2002 
+//     },
+//     {
+//         book: "C",
+//         author: "Z",
+//         edition: 2005
+//     }
+// ]
+// const Details = arr.filter( (item) => {
+//    return item.edition <= 2005 && item.book == "B"
+// })
+// console.log(Details);
+
+
+
+
+
+
+function concatenateStrings(string1, string2) {
+    // Concatenate the strings
+    result = string1 + string2;
+    
+    // Print the concatenated string
+    console.log(result);
+}
+
+
+string1 = "Hello, ";
+string2 = "World!";
+concatenateStrings(string1, string2);
