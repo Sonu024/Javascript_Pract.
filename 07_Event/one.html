@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body style = "background-color: bisque;">
+    <div id="events">
+        <ul id="list">
+        <li><img src="c:\Users\ASUS\Desktop\Amazon\images\headset.jpg" id="headset" alt="headset"></li>
+        <li><img src="c:\Users\ASUS\Desktop\Amazon\images\dresses.jpg" id="dress" alt="dress"></li>
+        <li><img src="c:\Users\ASUS\Desktop\Amazon\images\headset.jpg" id="headset" alt="headset"></li>
+        </ul>
+        </div>
+    </div>
+</body>
+
+<script>
+     document.getElementById('events').addEventListener('click', function(e){
+        alert("events clicked"), false;
+
+    })
+    
+    document.getElementById('headset').addEventListener('click', function(e){
+        alert("headset clicked"), false;
+        e.stopPropagation();
+    })
+
+    //false and true for propagation
+    //false bubble mode: bottom to top
+    //true capturing mode:top to bottom
+
+    //Remove
+    document.querySelector('#events').addEventListener('click', function(e){
+        console.log(e.target.tagName)
+        if(e.target.tagName === 'IMG'){
+            const dlt = e.target.parentNode
+            dlt.remove();
+        }
+    
+        
+    })
+</script>
+</html>
