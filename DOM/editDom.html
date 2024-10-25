@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul class="aa">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+    // function language(lang){ 
+    // const li = document.createElement("li");
+    // li.innerHTML = `${lang}`
+    // document.querySelector('.aa').appendChild(li)
+
+    // }
+    // language("python");
+
+    //optimal process
+    function optiLanguage(langu){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langu));
+        document.querySelector('.aa').appendChild(li);
+    }
+    optiLanguage("C++")
+
+    //edit
+    const secondlang  = document.querySelector('li:nth-child(2)');
+    const replace = document.createElement('li');
+    replace.textContent = 'Moja'
+    secondlang.replaceWith(replace)
+
+    //edit with outer html
+    // const outerhtml = document.querySelector('li:first-child');
+    // outerhtml.outerHTML = '<li>Typescript</li>';
+    
+    //remove
+    const first = document.querySelector('li:first-child');
+    first.remove();
+
+   
+</script>
+</html>
