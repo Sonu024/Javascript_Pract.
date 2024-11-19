@@ -10,7 +10,7 @@ const startOver = document.querySelector('.resultParas');
 let playGame = true;
 let preGuess = [];
 let numGuess = 0;
- const p = document.createElement('p');
+ let p = document.createElement('p');
 
  if(playGame){
     submit.addEventListener('click', function(e){
@@ -68,21 +68,22 @@ function endGame(){
     input.setAttribute('disabled', '')
     p.classList.add('button')
     p.innerHTML = `<h2 id="newGame">Start a new Game</h2>`;
+    startOver.appendChild(p);
     playGame= false
-    startOver.appendChild(p)
     startGame();
 }
 
-function startGame(){
-  const button = document.querySelector('#newGame');
-  button.addEventListener("click", function(e){
-    random = parseInt(Math.random() * 100 + 1)
-    preGuess = [];
-    numGuess = 0;
-    input.value = ''
-    remaining.innerHTML = `${11-numGuess}`;
-    startOver.removeChild(p);
-    input.removeAttribute('disabled');
-    playGame = 'true'
-  })
-}
+function startGame() {
+    const newGameButton = document.querySelector('#newGame');
+    newGameButton.addEventListener('click', function (e) {
+      random = parseInt(Math.random() * 100 + 1);
+      prevGuess = [];
+      numGuess = 1;
+      previous.innerHTML = '';
+      remaining.innerHTML = `${11 - numGuess} `;
+      input.removeAttribute('disabled');
+      startOver.removeChild(p);
+  
+      playGame = true;
+    });
+  }
