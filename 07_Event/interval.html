@@ -11,29 +11,21 @@
     <button id="stop">stop</button>
 </body>
 <script>
+    let Stop
 let interval = function(){
     console.log("Sonu", Date.now());
 }
 
 const clear =  function(){
-    setInterval(interval, 1000)
-    console.log("..");
+    Stop = setInterval(interval, 1000)
     }
  document.querySelector("#start").addEventListener("click",clear);  
 
-document.querySelector("#stop").addEventListener("click", function(){
-    clearInterval(clear);
-    console.log("hh");
-    clear = null;
-})  
 
-
-
-
-
-
-
-
+ const StopChanging = function(){
+    clearInterval(Stop)
+ }
+document.querySelector("#stop").addEventListener("click", StopChanging)  
 
 </script>
 </html>
